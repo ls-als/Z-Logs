@@ -1,7 +1,7 @@
 -- Config --
 local webhook = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL
 local name = "Z-Logs System"
-local logo = "https://imgur.com/aZIMrO9.jpg" -- URL of the profile logo of webhook
+local logo = "https://imgur.com/aZIMrO9.jpg" --Replace with your image
 
 -- Function to send the embed message to the Discord webhook --
 local function sendEmbedMessage(embed)

@@ -12,8 +12,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-version '1.0.0'
-author 'Anto Orza#6115'
+version '1.0.1'
+author 'Anto_Orza / Anto Orza#6115'
 description 'Z Logs (basic) (https://orzafamily.com/)'
 repository 'https://github.com/LS-Robert/Z-Logs'
 

@@ -1,10 +1,16 @@
--- Config --
-local webhook = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL
+-- Config all --
+
+local webhookAll = "https://discord.com/api/webhooks/1163929435074994228/0LC6HGs3rMeHDU1j2xIsPuV37LfWgvmmnIXzYPhj0nWdcln_uNzSeO-7JJhmMEoCPq52" -- Replace with your Discord webhook URL
+
+-- Config one per one -- 
+local webhookJoin = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL
+local webhookLeave = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL
 local name = "Z-Logs System"
-local logo = "https://imgur.com/aZIMrO9.jpg" --Replace with your image
+local logo = "https://imgur.com/aZIMrO9.jpg" -- Replace if you want
+
 
 -- Function to send the embed message to the Discord webhook --
-local function sendEmbedMessage(embed)
+local function sendEmbedMessage(webhook, embed)
     PerformHttpRequest(webhook, function (err, text, headers) end, 'POST', json.encode({ username = name, embeds = { embed } }), { ['Content-Type'] = 'application/json' })
 end
 
@@ -63,8 +69,8 @@ AddEventHandler('playerConnecting', function()
         }
     }
 
-    -- Send the embed message to the Discord webhook --
-    sendEmbedMessage(connectingEmbed)
+    sendEmbedMessage(webhookJoin, connectingEmbed)
+    sendEmbedMessage(webhookAll, connectingEmbed)
 end)
 
 -- Event when a player disconnects from the server --
@@ -96,6 +102,6 @@ AddEventHandler('playerDropped', function(reason)
         }
     }
 
-    -- Send the embed message to the Discord webhook --
-    sendEmbedMessage(disconnectingEmbed)
+    sendEmbedMessage(webhookLeave, disconnectingEmbed)
+    sendEmbedMessage(webhookAll, disconnectingEmbed)
 end)

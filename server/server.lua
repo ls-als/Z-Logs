@@ -1,6 +1,6 @@
 -- Config all --
 
-local webhookAll = "https://discord.com/api/webhooks/1163929435074994228/0LC6HGs3rMeHDU1j2xIsPuV37LfWgvmmnIXzYPhj0nWdcln_uNzSeO-7JJhmMEoCPq52" -- Replace with your Discord webhook URL
+local webhookAll = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL
 
 -- Config one per one -- 
 local webhookJoin = "PLACE_HERE_YOUR_WEBHOOK" -- Replace with your Discord webhook URL

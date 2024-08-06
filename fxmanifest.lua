@@ -14,7 +14,7 @@ game 'gta5'
 
 version '1.0.1'
 author 'Anto_Orza / Anto Orza#6115'
-description 'Z Logs (basic) (https://orzafamily.com/)'
+description 'Z Logs (basic)'
 repository 'https://github.com/LS-Robert/Z-Logs'
 
 server_scripts {
